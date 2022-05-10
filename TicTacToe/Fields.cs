@@ -97,13 +97,7 @@ namespace TicTacToe
         }
         public void Computer()
         {
-            int cnt = 0;
-            foreach(string fiel in GameField)
-            {
-                if (fiel == "1" || fiel == "3" || fiel == "6" || fiel == "9") cnt++; 
-            }
-            if (GameField[0] == "1" && CrossNullComputer == "X") GameField[0] = CrossNullComputer;
-            else if (GameField[4] != CrossNullComputer && GameField[4] != CrossNull)
+            if (GameField[4] != CrossNullComputer && GameField[4] != CrossNull)
                 GameField[4] = CrossNullComputer;
             else
             {
@@ -199,10 +193,7 @@ namespace TicTacToe
                         GameField[5] = CrossNullComputer;
                     else
                     {
-                        if (GameField[8] == "9" && CrossNullComputer == "X" && cnt <= 2) GameField[8] = CrossNullComputer;
-                        else if (GameField[6] == "7" && CrossNullComputer == "X" && cnt <= 2) GameField[6] = CrossNullComputer;
-                        else if (GameField[2] == "3" && CrossNullComputer == "X" && cnt <= 2) GameField[2] = CrossNullComputer;
-                        else if (GameField[4] == CrossNullComputer && GameField[0] == CrossNullComputer && GameField[3] == "4" &&
+                        if (GameField[4] == CrossNullComputer && GameField[0] == CrossNullComputer && GameField[3] == "4" &&
                             GameField[5] == "6" && GameField[6] == "7") GameField[3] = CrossNullComputer;
                         else if (GameField[4] == CrossNullComputer && GameField[0] == CrossNullComputer && GameField[1] == "2"
                             && GameField[7] == "8" && GameField[2] == "3") GameField[1] = CrossNullComputer;
